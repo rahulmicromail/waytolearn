@@ -1,6 +1,24 @@
-<ion-slides [options]="feedslider" class="feeslider">
-  <ion-slide *ngFor="let feed of feedData; let i = index">
-      <p [innerHTML]="feed.feed"></p>
+<h3>Featured</h3>
+<ion-slides [options]="topslider" class="topslider">
+  <ion-slide>
+    slide one 
+  </ion-slide>
+  <ion-slide>
+    slide two 
+  </ion-slide>
+  <ion-slide>
+    slide three 
+  </ion-slide>
+  <ion-slide>
+    slide four 
+  </ion-slide>
+</ion-slides>
+<h3>Top courses</h3>
+<ion-slides [options]="feedslider">
+  <ion-slide *ngFor="let feed of feedData; let i = index" class="feedslider">
+     <ion-card-header>
+       <ion-card-subtitle> <p [innerHTML]="feed.feed"></p></ion-card-subtitle>
+     </ion-card-header> <p [innerHTML]="feed.feed"></p>
     <app-timeago [created]="feed.created"></app-timeago>
   </ion-slide>
 </ion-slides>

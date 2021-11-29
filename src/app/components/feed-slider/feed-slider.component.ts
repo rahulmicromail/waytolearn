@@ -10,7 +10,11 @@ import { FeedService } from './../../services/feed.service';
 export class FeedSliderComponent implements OnInit {
   feedslider ={
     autoplay: true,
-    slidesPerView: 2.5
+    slidesPerView: 2.5,
+    speed: 400
+  }
+  topslider ={
+    slidesPerView: 1.5
   }
   @Input() loginUser: any;
   feedData: any;

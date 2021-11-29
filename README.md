@@ -1,0 +1,2 @@
+# waytolearn
+ionic angular project

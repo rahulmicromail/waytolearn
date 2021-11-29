@@ -1,0 +1,6 @@
+<ion-slides [options]="feedslider" class="feeslider">
+  <ion-slide *ngFor="let feed of feedData; let i = index">
+      <p [innerHTML]="feed.feed"></p>
+    <app-timeago [created]="feed.created"></app-timeago>
+  </ion-slide>
+</ion-slides>

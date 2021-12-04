@@ -1,9 +1,8 @@
 <ion-content>
-
   <ion-item>
-    <h2> Welcome {{ authUser?.name }}</h2>
+    <h2> Let's start learning, {{ authUser?.name }}</h2>
   </ion-item>
   <app-feed-slider [loginUser]="authUser"></app-feed-slider>
-  <!-- <app-feed-update [loginUser]="authUser"></app-feed-update> -->
+  <app-feed-update [loginUser]="authUser"></app-feed-update>
   <app-feed-card [loginUser]="authUser"></app-feed-card>
 </ion-content>

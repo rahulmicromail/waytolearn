@@ -8,13 +8,13 @@ import { FeedService } from './../../services/feed.service';
   styleUrls: ['./feed-slider.component.scss'],
 })
 export class FeedSliderComponent implements OnInit {
+  topslider ={
+    slidesPerView: 1.5,
+    autoplay: true
+  }
   feedslider ={
-    autoplay: true,
     slidesPerView: 2.5,
     speed: 400
-  }
-  topslider ={
-    slidesPerView: 1.5
   }
   @Input() loginUser: any;
   feedData: any;
@@ -23,7 +23,7 @@ export class FeedSliderComponent implements OnInit {
     token: '',
     feed_id: ''
   };
-
+data = [];
   constructor(
     private feedSerivce: FeedService,
     private alertSerivce: AlertService
@@ -51,4 +51,7 @@ export class FeedSliderComponent implements OnInit {
         }
       });
   }
+
+  
+ 
 }

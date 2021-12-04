@@ -1,7 +1,53 @@
-<h3>Featured</h3>
+<ion-card style="text-align: center;">
+  <h3>Featured</h3>
+</ion-card>
 <ion-slides [options]="topslider" class="topslider">
   <ion-slide>
-    slide one 
+    <ion-card>
+      <ion-card-header>
+        <img src="assets/images/slider1.jpeg" alt="">
+        <ion-card-subtitle>Python for Data Science and Machine Learning</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <img src="assets/images/slider2.jpeg" alt="">
+        <ion-card-subtitle>Deep Learning A-Z™: Hands-On Artificial Neural</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <img src="assets/images/slider3.jpeg" alt="">
+        <ion-card-subtitle>Python for Data Science and Machine Learning</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+      <ion-card-header>
+        <img src="assets/images/slider4.png" alt="">
+        <ion-card-subtitle>Python for Data Science and Machine Learning</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+
+      </ion-card-content>
+    </ion-card>
   </ion-slide>
   <ion-slide>
     slide two 
@@ -13,12 +59,21 @@
     slide four 
   </ion-slide>
 </ion-slides>
-<h3>Top courses</h3>
+<ion-card style="text-align: center;">
+  <h3>Top courses</h3>
+</ion-card>
+
 <ion-slides [options]="feedslider">
   <ion-slide *ngFor="let feed of feedData; let i = index" class="feedslider">
      <ion-card-header>
        <ion-card-subtitle> <p [innerHTML]="feed.feed"></p></ion-card-subtitle>
-     </ion-card-header> <p [innerHTML]="feed.feed"></p>
-    <app-timeago [created]="feed.created"></app-timeago>
+     </ion-card-header>
+     <ion-card-content>
+      <button (click)="feedDeleteAction(i, feed.feed_id)" class="right">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      <p [innerHTML]="feed.feed"></p>
+      <app-timeago [created]="feed.created"></app-timeago>
+    </ion-card-content>
   </ion-slide>
 </ion-slides>

@@ -24,25 +24,26 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'messages',
+        path: 'subjects',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../pages/messages/messages.module').then(
-                m => m.MessagesPageModule
+              import('../pages/subjects/subjects.module').then(
+                m => m.SubjectsPageModule
               )
           }
         ]
       },
+      
       {
-        path: 'notifications',
+        path: 'class_room',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../pages/notifications/notifications.module').then(
-                m => m.NotificationsPageModule
+              import('../pages/classroom/classroom.module').then(
+                m => m.ClassroomPageModule
               )
           }
         ]

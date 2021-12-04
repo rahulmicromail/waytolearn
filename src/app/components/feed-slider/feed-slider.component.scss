@@ -6,7 +6,16 @@ ion-slide{
     border: 2px;
     
 }
-.topslider{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+
+.right {
+    float: right;
+    ion-icon {
+      font-size: 18px;
+    }
+  }
+  ion-card-content{
+    p{
+      color:#333333 !important;
+    }
+  }
+  
